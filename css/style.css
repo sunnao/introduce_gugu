@@ -43,7 +43,12 @@ h1{
 }
 
 #chat {
-    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 400px;
+    top: 50px;
+    width: 400px;
+    /* transform: rotate(10deg); */
 }
 .frameDiv {
     margin-top: 50px;
