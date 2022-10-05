@@ -4,6 +4,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Galmuri14';
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Galmuri14 Regular'),
+         url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri14.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri14.ttf') format('truetype');
+  }
 * {
     margin: 0;
     padding: 0;
@@ -41,14 +51,30 @@ h1{
     font-size: 30px;
     padding-left: 30px;
 }
-
-#chat {
+#bubbleArea{
+    opacity: 0;
     position: absolute;
+    display: inline;
     z-index: 1;
-    left: 400px;
     top: 50px;
+    left: 400px;
+}
+#chatBubble {
+    position: absolute;
+    z-index: 2;
     width: 400px;
     /* transform: rotate(10deg); */
+}
+#saysth {
+    font-size: 45px;
+    font-family: 'Galmuri14', sans-serif;
+    font-weight: bold;
+
+    position: absolute;
+    z-index: 3;
+    width: 18rem;
+    left: 70px;
+    top: 170px;
 }
 .frameDiv {
     margin-top: 50px;
@@ -56,14 +82,12 @@ h1{
     height : 303px;
     overflow: hidden;
     position: relative;
-
 }
 #profileImg {
     width :300px;
     transition:0.5s ease 0.5s;
     position: absolute;
 }
-
 #cameraFrame {
     position: absolute;
     width: 480px; 
@@ -71,7 +95,6 @@ h1{
     top:-30px;
     opacity: 0;
 }
-
 .maincontainer{
     display: grid;
 }
@@ -91,7 +114,6 @@ h1{
     grid-column: 2 / 3;
 	grid-row: 2 / 3;
 }
-
 .maincontainer > section {
     margin-top: 100px;
     line-height: 170%;
@@ -108,7 +130,6 @@ h1{
 .skill > ul {
     margin-left: 40px;
 }
-
 footer {
     background-color: lightgray;
     padding :30px;
